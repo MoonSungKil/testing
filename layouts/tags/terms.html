@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="taxonomie">
+  <h1 class="taxonomie_header">{{.Title}}</h1>
+  <ul class="taxonomie_list">
+    {{range .Paginator.Pages }}
+    <a class="taxonomie_link" href="{{ .Permalink}}">
+      <li class="taxonomie_list_item">
+        <p class="taxonomie_text taxonomie_tags">{{.Title}}</p>
+      </li>
+    </a>
+    {{end}}
+  </ul>
+</div>
+{{ end }}

@@ -1,0 +1,28 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Macedonian Express Journal'
+
+
+paginate = 999
+
+
+[params]
+dateFormat = "Jan 2, 2006, 3:04PM"
+header_image = "https://images.pexels.com/photos/4338093/pexels-photo-4338093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+bottom_image = "https://images.pexels.com/photos/1369476/pexels-photo-1369476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+description = """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis."""
+
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    author = "authors"
+    publisher = "publishers"

@@ -1,0 +1,145 @@
+{{define "main"}}
+{{ if .Params.pdf}}
+<div class="single_journal_pdf_banner">
+  <h4>{{ .Title}}</h4>
+  <a class="single_journal_pdf_banner_download" href="{{ .Params.pdf}}" download=""><span>
+    Download PDF
+  </span>
+  <i class="fa-solid fa-download"></i></a>
+</div>
+{{end}}
+<div class="single_journal_container">
+  <article class="single_journal">
+    <h1 class="single_journal_title md-4 mb-4">{{ .Title}}</h1>
+    <div class="single_journal_meta_data mb-4">
+      <div class="single_journal_image">
+        <img class="single_journal_image" src="{{ .Params.image}}" alt="{{ .Title}}" />
+      </div>
+      <div class="single_journal_info">
+        <span class="single_journal_author">Written by: 
+        <a href="{{ "/authors/" | relLangURL }}{{ .Params.authors | urlize }}">{{ .Params.authors }}</a></span>
+        <span class="single_journal_publisher">Published by: 
+          
+          <a href="{{ "/publishers/" | relLangURL }}{{ .Params.publishers | urlize }}">  {{ .Params.publishers}}</a>
+        </span>
+        <span class="single_journal_date_created">
+          <time>Published at: {{ dateFormat .Site.Params.dateFormat .Date}}</time>
+        </span>
+        <span class="single_journal_tags">
+          {{ range (.GetTerms "tags")}}
+          <a href="{{ .Permalink}}"># {{.LinkTitle}}</a>
+          {{ end}}
+        </span>
+      </div>
+    </div>
+    <hr />
+    <div class="single_journal_body">
+      <div  class="single_journal_content">
+        {{ if .Content}}
+        <div id="abs" class="single_journal_content_element">
+          <h2 >Abstract</h2>
+          <p>{{ .Content}}</p>
+        </div>
+        <hr />
+        {{end}}
+        {{ if .Params.references}}
+        <div id="ref" class="single_journal_content_element">
+          <h2 >References</h2>
+          <ul>
+            {{ range .Params.references }}
+             <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        <hr />
+        {{end}}
+        {{ if .Params.acknowledgements}}
+        <div id="ack" class="single_journal_content_element">
+          <h2 >Acknowledgements</h2>
+          <p>{{ .Params.acknowledgements}}</p>
+        </div>
+        <hr />
+        {{end}}
+        {{ if .Params.author_information}}
+        <div id="aut" class="single_journal_content_element">
+          <h2>Author Information</h2>
+          <p>{{ .Params.author_information}}</p>
+        </div>
+        <hr />
+        {{end}}
+        {{ if .Params.rights_and_permissions}}
+        <div id="rights" class="single_journal_content_element">
+          <h2 >Rights and Permissions</h2>
+          <p>{{ .Params.rights_and_permissions}}</p>
+        </div>
+        <hr />
+        {{end}}
+        {{ if .Params.contributions}}
+        <div id="conts" class="single_journal_content_element">
+          <h2 >Contributions</h2>
+          <p>{{ .Params.contributions}}</p>
+        </div>
+        <hr />
+        {{end}}
+        {{ if .Params.about_this_article}}
+        <div id="about" class="single_journal_content_element">
+          <h2 >About This Article</h2>
+          <p>{{ .Params.about_this_article}}</p>
+        </div>
+        <hr />
+        {{end}}
+        {{ if .Params.additional_links}}
+        <div id="addit" class="single_journal_content_element">
+          <h2 >Additional Links</h2>
+          <ul>
+           {{ range .Params.additional_links }}
+                <li><a href="{{ . }}"  target="_blank">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+       </div>
+       {{end}}
+      </div>
+      <div class="single_journal_navigation">
+        {{ if .Content}}
+        <a href="#abs">Abstract</a >
+        {{end}}
+        {{if .Params.references}}
+        <a href="#ref">References</a >
+        {{end}}
+        {{if .Params.acknowledgements}}
+        <a href="#ack">Acknowledgments</a>
+        {{end}}
+        {{if .Params.author_information}}
+        <a href="#aut">Author Information</a >
+        {{end}}
+        {{if .Params.rights_and_permissions}}
+        <a href="#rights">Rights and permissions</a >
+        {{end}}
+        {{if .Params.contributions}}
+        <a href="#conts">Contributions</a >
+        {{end}}
+        {{if .Params.about_this_article}}
+        <a href="#about">About this article</a>
+        {{end}}
+        {{if .Params.additional_links}}
+        <a href="#addit">Additional links</a>
+        {{end}}
+      </div>
+    </div>
+    {{ if .Params.pdf}}
+    <hr />
+    <a class="single_journal_pdf_download" href="{{ .Params.pdf}}" download="">Download PDF</a>
+    {{ end}}
+  </article>
+  <!-- {{ if .Params.publisherLogo}}
+  <div class="single_journal_envelop_mark">
+    <img src="/img/mark.png" alt="envelop mark" />
+    <div class="single_journal_envelop_mark_publisher">
+      <img src="{{ .Params.publisherLogo}}" alt="{{ .Params.publishers}}" />
+    </div>
+    <div class="single_journal_envelop_banner"></div>
+  </div>
+{{end}} -->
+</div>
+
+{{end}}

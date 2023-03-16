@@ -1,0 +1,13 @@
+<!-- layouts/partials/journals-list.html -->
+<div class="main_taxonomy_list_wrapper">
+  <a href="/journals">Journals</a>
+  <div class="main_taxonomy_list_outer_border">
+    <div class="main_taxonomy_list_container">
+      <div class="main_taxonomy_list">
+        {{range .Paginator.Pages}}
+        <a href="{{.Permalink}}">{{ .Title }}</a>
+        {{end}}
+      </div>
+    </div>
+  </div>
+</div>

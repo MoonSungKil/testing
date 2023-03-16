@@ -1,0 +1,31 @@
+<!-- layouts/partials/authors-list.html -->
+<div class="main_taxonomy_list_wrapper">
+  <a href="/authors">Authors</a>
+  <div class="main_taxonomy_list_outer_border">
+    <div class="main_taxonomy_list_container">
+      <div class="main_taxonomy_list">
+        <!-- creating an dictionary using the dict function and assign it to a new variable $renderedAuthors. This dictionary will be used to keep track of the authors that have already been rendered. -->
+        {{ $renderedAuthors := dict }}
+
+        <!-- Starting a loop that iterates over all the pages in the current pagination context. -->
+        {{ with .Paginator }} {{ range .Pages }}
+
+        <!-- Starting a nested loop that iterates over all the authors in the current page's authors field. We split the authors field by the comma and space separator using the split function, and assign each author to a new variable $author. -->
+        {{ range $author := split .Params.authors ", " }}
+
+        <!-- remove any leading or trailing spaces from the author name using the trim function, and assign the result to a new variable $authorTrimmed. -->
+        {{ $authorTrimmed := trim $author " " }}
+
+        <!-- use the index function to check if the current author has already been rendered by checking if it exists in the $renderedAuthors dictionary. If the author has not been rendered, we proceed with rendering the author name. -->
+        {{ if not (index $renderedAuthors $authorTrimmed) }}
+
+        <!-- 
+                    use the merge function to add the author to the $renderedAuthors dictionary with a value of true. This ensures that we don't render the same author name again in future iterations of the loop. -->
+        {{ $renderedAuthors = merge $renderedAuthors (dict $authorTrimmed true) }}
+
+        <a href="/authors/{{ $authorTrimmed | urlize }}/">{{ $authorTrimmed }}</a>
+        {{ end }} {{ end }} {{ end }} {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

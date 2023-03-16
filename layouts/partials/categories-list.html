@@ -1,0 +1,29 @@
+<div class="main_taxonomy_list_wrapper">
+  <a href="/categories">Categories</a>
+  <div class="main_taxonomy_list_outer_border">
+    <div class="main_taxonomy_list_container">
+      <div class="main_taxonomy_list">
+        <!-- creating an dictionary using the dict function and assign it to a new variable $renderedCategories. This dictionary will be used to keep track of the categories that have already been rendered. -->
+        {{ $renderedCategories := dict }}
+
+        <!-- Starting a loop that iterates over all the pages in the current pagination context. -->
+        {{ range .Site.RegularPages }}
+
+        <!-- Starting a nested loop that iterates over all the categories in the current page's categories field. We assign each category to a new variable $category. -->
+        {{ range $category := .Params.categories }}
+
+        <!-- remove any leading or trailing spaces from the category name using the trim function, and assign the result to a new variable $categoryTrimmed. -->
+        {{ $categoryTrimmed := trim $category " " }}
+
+        <!-- use the index function to check if the current category has already been rendered by checking if it exists in the $renderedCategories dictionary. If the category has not been rendered, we proceed with rendering the category name. -->
+        {{ if not (index $renderedCategories $categoryTrimmed) }}
+
+        <!-- use the merge function to add the category to the $renderedCategories dictionary with a value of true. This ensures that we don't render the same category name again in future iterations of the loop. -->
+        {{ $renderedCategories = merge $renderedCategories (dict $categoryTrimmed true) }}
+
+        <a href="/categories/{{ $categoryTrimmed | urlize }}/">{{ $categoryTrimmed }}</a>
+        {{ end }} {{ end }} {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

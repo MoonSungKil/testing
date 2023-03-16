@@ -1,0 +1,63 @@
+.main_taxonomy_list_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_taxonomy_list_wrapper > a {
+  color: var(--mainColor);
+  text-shadow: 2px 2px 2px black;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.main_taxonomy_list_outer_border {
+  border: 1px solid var(--borderGray);
+  width: 15rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.main_taxonomy_list_container {
+  border: 1px solid var(--borderGray);
+  width: 14rem;
+  height: 11rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  overflow-y: scroll;
+  border-radius: 4px;
+  position: relative;
+}
+
+.main_taxonomy_list_container::-webkit-scrollbar {
+  width: 0; /* Hide the scrollbar */
+  background-color: transparent; /* Make the scrollbar transparent */
+}
+
+.main_taxonomy_list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: "Oswalld";
+  transition: all 0.5s ease;
+  top: 0;
+  padding: 0.3rem;
+  width: 100%;
+}
+
+.main_taxonomy_list > a {
+  text-decoration: none;
+  width: 100%;
+  border-bottom: 1px solid var(--borderGray);
+  color: var(--borderGray);
+  text-align: center;
+}
+
+.main_taxonomy_list > a:hover {
+  border-bottom: 1px solid var(--mainColor);
+  color: var(--mainColor);
+}

@@ -1,0 +1,29 @@
+{{define "main"}}
+<div class="main_container">
+  <div
+    style="background-image: url({{.Site.Params.header_image}});"
+    class="main_header_image"
+  ></div>
+  <div class="main_text">
+    <h2>{{.Title}}</h2>
+    <p>{{ .Site.Params.description}}</p>
+  </div>
+  <div class="main_bottom">
+    <div class="main_taxonomies">
+      <!-- authors list -->
+      {{ partial "authors-list" .}}
+
+      <!-- journals list -->
+      {{ partial "journals-list" .}}
+
+      <!-- categories list -->
+      {{ partial "categories-list" .}}
+    </div>
+    <div
+      style="background-image: url({{.Site.Params.bottom_image}});"
+      class="main_bottom_image"
+    ></div>
+  </div>
+</div>
+
+{{end}}

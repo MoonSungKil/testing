@@ -1,0 +1,64 @@
+{{define "main"}}
+
+<section class="list_journals">
+  {{range .Paginator.Pages }}
+  <div class="list_journal_outline">
+    <article class="list_journal_entity pb-4">
+      <div class="list_journal_title_header">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </div>
+      <div class="list_journal_bottom_content">
+        <div class="list_journal_left_side">
+          <div class="list_journal_entity_title mt-4 mb-4">
+            <a href="{{.Permalink}}">
+              <img class="list_journal_entity_image" src="{{ .Params.image}}" alt="{{ .Title}}" />
+            </a>
+          </div>
+        </div>
+
+        <div class="list_journal_right_side">
+          <div class="list_journal_content_border">
+            <div class="journal_list_content">
+              <h4>Short Summary</h4>
+              <p>{{ .Content | truncate 700 }}</p>
+            </div>
+          </div>
+          <div class="list_journal_meta mb-4">
+            <span class="list_journal_author">
+              <p>Written by:</p>
+              <a href="{{ "/authors/" | relLangURL }}{{ .Params.authors | urlize }}">{{ .Params.authors }}</a>
+            </span>
+            {{ if .Params.publishers}}
+            <span class="list_journal_publisher">
+              <p>Published by:</p>
+              <a href="{{ "/publishers/" | relLangURL }}{{ .Params.publishers | urlize }}">{{ .Params.publishers}}</a>
+            </span>
+            {{end}}
+            <span class="list_journal_date">
+              <time>Published at: {{ dateFormat .Site.Params.dateFormat .Date}}</time>
+            </span>
+          </div>
+        </div>
+      </div>
+      {{ if .Params.publisherLogo}}
+      <div class="list_journal_publisher_logo_outline">
+        <div class="list_journal_publisher_logo_inner_outline">
+          <div class="list_journal_publisher_logo">
+            <img src="{{ .Params.publisherLogo}}" />
+          </div>
+        </div>
+      </div>
+      {{end}}
+      <div class="list_journal_tag_collection">
+        {{ range (.GetTerms "tags")}}
+        <a href="{{ .Permalink}}"># {{.LinkTitle}}</a>
+        {{ end}}
+      </div>
+    </article>
+  </div>
+  {{end}}
+  {{ template "_internal/pagination.html" . }}
+</section>
+
+
+{{end}}

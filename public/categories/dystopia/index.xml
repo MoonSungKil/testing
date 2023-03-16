@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dystopia on Macedonian Express Journal</title>
+    <link>/categories/dystopia/</link>
+    <description>Recent content in Dystopia on Macedonian Express Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Mar 2023 18:40:18 +0100</lastBuildDate><atom:link href="/categories/dystopia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1984</title>
+      <link>/journals/journal2/</link>
+      <pubDate>Sat, 04 Mar 2023 18:40:18 +0100</pubDate>
+      
+      <guid>/journals/journal2/</guid>
+      <description>Random content Typography Raw Texts Image 1 Image 2 Image 3 Video Dummy Image With Link to Itself 5 facts about life technologies that will impress your friends. The evolution of open source software. How devices can help you predict the future. Why open source software should be 1 of the 7 deadly sins. Why operating systems are on crack about operating systems. 20 insane (but true) things about best stores.</description>
+    </item>
+    
+    <item>
+      <title>Animal Farm</title>
+      <link>/journals/journal3/</link>
+      <pubDate>Sat, 04 Mar 2023 18:40:18 +0100</pubDate>
+      
+      <guid>/journals/journal3/</guid>
+      <description>Random content Typography Raw Texts Image 1 Image 2 Image 3 Video Dummy Image With Link to Itself 5 facts about life technologies that will impress your friends. The evolution of open source software. How devices can help you predict the future. Why open source software should be 1 of the 7 deadly sins. Why operating systems are on crack about operating systems. 20 insane (but true) things about best stores.</description>
+    </item>
+    
+  </channel>
+</rss>
