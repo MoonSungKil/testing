@@ -4,7 +4,7 @@
   </header>
   <div class="journal_header_lists">
     <ul class="journal_header_ul">
-      <li><a href="/journals">Journals</a></li>
+      <li><a href="{{ "/journals" | relURL }}">Journals</a></li>
       {{ range $name, $taxonomy := .Site.Taxonomies }} {{ $link := printf "/%s/" $name }} {{ $link
       := printf "/%s/" $name }}
       <li><a href="{{ $link | relURL }}">{{ $name | title }}</a></li>
