@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publishers on Macedonian Express Journal</title>
-    <link>/publishers/</link>
+    <link>https://moonsungkil.github.io/testing/publishers/</link>
     <description>Recent content in Publishers on Macedonian Express Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Mar 2023 18:40:18 +0100</lastBuildDate><atom:link href="/publishers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Mar 2023 18:40:18 +0100</lastBuildDate><atom:link href="https://moonsungkil.github.io/testing/publishers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Harper Collins</title>
-      <link>/publishers/harper-collins/</link>
+      <link>https://moonsungkil.github.io/testing/publishers/harper-collins/</link>
       <pubDate>Sat, 04 Mar 2023 18:40:18 +0100</pubDate>
       
-      <guid>/publishers/harper-collins/</guid>
+      <guid>https://moonsungkil.github.io/testing/publishers/harper-collins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mac Millan</title>
-      <link>/publishers/mac-millan/</link>
+      <link>https://moonsungkil.github.io/testing/publishers/mac-millan/</link>
       <pubDate>Sat, 04 Mar 2023 18:40:18 +0100</pubDate>
       
-      <guid>/publishers/mac-millan/</guid>
+      <guid>https://moonsungkil.github.io/testing/publishers/mac-millan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Penguin</title>
-      <link>/publishers/penguin/</link>
+      <link>https://moonsungkil.github.io/testing/publishers/penguin/</link>
       <pubDate>Sat, 04 Mar 2023 18:40:18 +0100</pubDate>
       
-      <guid>/publishers/penguin/</guid>
+      <guid>https://moonsungkil.github.io/testing/publishers/penguin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Simon and Schuster</title>
-      <link>/publishers/simon-and-schuster/</link>
+      <link>https://moonsungkil.github.io/testing/publishers/simon-and-schuster/</link>
       <pubDate>Sat, 04 Mar 2023 18:40:18 +0100</pubDate>
       
-      <guid>/publishers/simon-and-schuster/</guid>
+      <guid>https://moonsungkil.github.io/testing/publishers/simon-and-schuster/</guid>
       <description></description>
     </item>
     
